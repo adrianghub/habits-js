@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/AdrianGHub/habits-js",
   "devDependencies": {
+    "html-webpack-plugin": "^4.2.0",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
   },
