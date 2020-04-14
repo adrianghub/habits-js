@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "start:dev": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,8 @@
   "devDependencies": {
     "html-webpack-plugin": "^4.2.0",
     "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
     "gh-pages": "^2.2.0"
