@@ -1,0 +1,27 @@
+{
+  "name": "habits-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdrianGHub/habits-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdrianGHub/habits-js/issues"
+  },
+  "homepage": "https://github.com/AdrianGHub/habits-js",
+  "devDependencies": {
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "gh-pages": "^2.2.0"
+  }
+}
