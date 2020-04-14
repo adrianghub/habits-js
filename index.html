@@ -3,9 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Habits</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="stylesheet" href="../src/style.css">
 </head>
 <body>
-    Halo, Moto! 
+    <div class="timer">
+        <div class="timer__controls">
+            <button data-time="600" class="timer__button">Workout Break 💪</button>
+            <button data-time="600" class="timer__button">Uke Rythms 🎻</button>
+            <button data-time="900" class="timer__button">Quick Nap 🥱</button>
+            <button data-time="900" class="timer__button">Meditate 🧘‍♀️</button>
+            <button data-time="1200" class="timer__button">Posiłeczek 🍲</button>
+            <form name="customForm" id="custom">
+                <input type="text" name="minutes" placeholder="Set countdown in minutes">
+            </form>
+        </div>
+    </div>
 <script src="bundle.js"></script></body>
 </html>
