@@ -13,7 +13,7 @@ function timer(seconds) {
     then = now + (seconds * 1000);
     displayTimeLeft(seconds);
     displayEndTime(then);
-}
+
 
 countdown = setInterval(() => {
     let secondsLeft = Math.round((then - Date.now()) / 1000);
@@ -26,6 +26,8 @@ countdown = setInterval(() => {
     displayTimeLeft(secondsLeft);
 
 }, 1000);
+
+}
 
 function displayTimeLeft(seconds) {
     const minutes = Math.floor(seconds / 60);
@@ -61,6 +63,15 @@ document.customForm.addEventListener('submit', function(e) {
     timer(mins * 60);
     this.reset();
     });
+
+    
+function random(property) {
+    return property[Math.floor(Math.random() * property.length)];
+}
+
+const shape = ['circle', 'ellipse'];
+
+const position = ['top', 'center', 'bottom', 'left', 'right'];
 
 
 function randomBg() {
