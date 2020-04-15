@@ -7,7 +7,7 @@ const buttons = document.querySelectorAll('[data-time]');
 let countdown;
 
 function timer(seconds) {
-    // clear any existing timers
+
     clearInterval(countdown);
     let now = Date.now();
     let then = now + (seconds * 1000);
@@ -19,13 +19,11 @@ function timer(seconds) {
     countdown = setInterval(() => {
         let secondsLeft = Math.round((then - Date.now()) / 1000);
 
-        // check if it should stop
         if(secondsLeft < 0) {
             clearInterval(countdown);
             return;
         }
 
-        // display timer
         displayTimeLeft(secondsLeft);
     }, 1000)
 }
