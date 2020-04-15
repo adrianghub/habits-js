@@ -49,3 +49,6 @@ function displayEndTime(timestamp) {
 function startTimer() {
     timer(this.dataset.time)
 }
+
+buttons.forEach(button => button.addEventListener('click', startTimer));
+buttons.forEach(button => button.addEventListener('click', randomBg));
