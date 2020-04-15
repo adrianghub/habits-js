@@ -9,23 +9,23 @@ let countdown;
 function timer(seconds) {
 
     clearInterval(countdown);
-    now = Date.now();
-    then = now + (seconds * 1000);
+    let now = Date.now();
+    let then = now + (seconds * 1000);
     displayTimeLeft(seconds);
     displayEndTime(then);
 
 
-countdown = setInterval(() => {
-    let secondsLeft = Math.round((then - Date.now()) / 1000);
+    countdown = setInterval(() => {
+        let secondsLeft = Math.round((then - Date.now()) / 1000);
 
-    if(secondsLeft < 0) {
-        clearInterval(countdown);
-        return;
-    }
+        if(secondsLeft < 0) {
+            clearInterval(countdown);
+            return;
+        }
 
-    displayTimeLeft(secondsLeft);
+        displayTimeLeft(secondsLeft);
 
-}, 1000);
+    }, 1000);
 
 }
 
@@ -64,7 +64,7 @@ document.customForm.addEventListener('submit', function(e) {
     this.reset();
     });
 
-    
+
 function random(property) {
     return property[Math.floor(Math.random() * property.length)];
 }
