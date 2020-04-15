@@ -31,3 +31,10 @@ function displayTimeLeft(seconds) {
     document.title = display;
     timerDisplay.textContent = display;
 }
+
+function displayEndTime(timestamp) {
+    const end = new Date(timestamp);
+    const hour = end.getHours();
+    const minutes = end.getMinutes();
+    endTime.timeContent = `Be Back At ${hour}:${minutes < 10 ? 0 : ''}${minutes}`;
+}
