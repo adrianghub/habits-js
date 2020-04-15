@@ -33,8 +33,8 @@ function displayTimeLeft(seconds) {
     const minutes = Math.floor(seconds / 60);
     const hours = Math.floor(minutes / 60);
     const remainderMinutes = minutes % 60;
-    remainderSeconds = seconds % 60;
-    `${minutes}:${remainderSeconds < 10 ? 0 : ''}${remainderSeconds}`;
+    const remainderSeconds = seconds % 60;
+    let display = `${minutes}:${remainderSeconds < 10 ? 0 : ''}${remainderSeconds}`;
     minutes >= 60 ? 
     display = `${hours}:${remainderMinutes < 10 ? 0 : ''}${remainderMinutes}:${remainderSeconds < 10 ? 0 : ''}${remainderSeconds}`
     : display;
