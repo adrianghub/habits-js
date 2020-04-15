@@ -6,8 +6,12 @@ const endTime = document.querySelector('.display__end-time');
 let countdown;
 
 function timer(seconds) {
+
+    clearInterval(countdown);
     now = Date.now();
     then = now + (seconds * 1000);
+    displayTimeLeft(seconds);
+    displayEndTime(then);
 }
 
 countdown = setInterval(() => {
@@ -17,6 +21,9 @@ countdown = setInterval(() => {
         clearInterval(countdown);
         return;
     }
+
+    displayTimeLeft(secondsLeft);
+
 }, 1000);
 
 function displayTimeLeft(seconds) {
@@ -37,4 +44,8 @@ function displayEndTime(timestamp) {
     const hour = end.getHours();
     const minutes = end.getMinutes();
     endTime.timeContent = `Be Back At ${hour}:${minutes < 10 ? 0 : ''}${minutes}`;
+}
+
+function startTimer() {
+    timer(this.dataset.time)
 }
