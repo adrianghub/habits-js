@@ -60,3 +60,29 @@ document.customForm.addEventListener('submit', function(e) {
     timer(mins * 60);
     this.reset();
     });
+
+
+function randomBg() {
+
+    const firstColor = {
+        r: Math.round(Math.random() * 255),
+        g: Math.round(Math.random() * 255),
+        b: Math.round(Math.random() * 255)
+    };
+    
+    const secondColor = {
+        r: Math.round(Math.random() * 255),
+        g: Math.round(Math.random() * 255),
+        b: Math.round(Math.random() * 255)
+    };
+    
+    firstColor.rgb = `rgb(${firstColor.r}, ${firstColor.g}, ${firstColor.b})`;
+    secondColor.rgb = `rgb(${secondColor.r}, ${secondColor.g}, ${secondColor.b})`;
+    
+    let randomBackground = `background: radial-gradient(${random(shape)} at ${random(position)}, ${firstColor.rgb}, ${secondColor.rgb})`;
+
+    document.body.classList.add('color-animation');
+    
+    document.body.style = randomBackground;
+    
+}
